@@ -166,6 +166,8 @@ describe('generateRequestObj', function () {
                     * request params, url, etc.
                     */
                 expect(requestObject).to.exist;
+                expect(requestObject.vp).to.equal('mobile');
+
             });
             /* -----------------------------------------------------------------------*/
         }
