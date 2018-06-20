@@ -70,7 +70,7 @@ describe('generateRequestObj', function () {
     /* -------------------------------------------------------------------- */
 
     /* Instantiate your partner module */
-    var partnerModule = partnerModule(partnerConfig);
+    partnerModule = partnerModule(partnerConfig);
     var partnerProfile = partnerModule.profile;
 
     /* Generate dummy return parcels based on MRA partner profile */
@@ -166,6 +166,10 @@ describe('generateRequestObj', function () {
                     * request params, url, etc.
                     */
                 expect(requestObject).to.exist;
+            });
+
+            it('should contain the ref url', function () {
+                expect(requestObject).to.include.keys('ref');
             });
             /* -----------------------------------------------------------------------*/
         }

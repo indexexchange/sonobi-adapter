@@ -126,7 +126,8 @@ function SonobiHtb(configs) {
         /* build data */
         var data = {
             key_maker: JSON.stringify(keyMaker), // jshint ignore:line
-            cv: 'sbi'
+            cv: 'sbi',
+            ref: __baseClass._configs.ref || Browser.getPageUrl()
         };
 
         return {
